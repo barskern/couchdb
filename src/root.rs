@@ -57,7 +57,7 @@ pub struct Root {
 #[derive(Clone, Debug, Default, Deserialize, Eq, Hash, PartialEq)]
 pub struct Vendor {
     pub name: String,
-    pub version: Version,
+    pub version: Option<Version>,
 
     #[serde(default = "PhantomData::default")]
     _private_guard: PhantomData<()>,

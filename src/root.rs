@@ -28,6 +28,7 @@ pub struct Root {
     pub uuid: Uuid,
     pub vendor: Vendor,
     pub version: Version,
+    pub features: Vec<String>,
 
     #[serde(default = "PhantomData::default")]
     _private_guard: PhantomData<()>,
